@@ -18,3 +18,47 @@ For example, using figures in July 2008:
   - (2.00 – 1.56) / 1.56 = 28%
   - the pound was thus overvalued against the dollar by 28%
 */
+
+let baseCurrency = 5.66
+let ukBigMac = 3.19
+let franceBigMac = 8
+let japanBigMac = 390
+
+
+let usdUkCurrencyRate = (1 - 0.72) / 0.72 * 100
+let ukbigMacIndex = usdUkCurrencyRate
+
+let usdFranceCurrencyRate = (1 - 0.83) / 0.83 * 100
+let francebigMacIndex = usdFranceCurrencyRate
+
+let usdJapanCurrencyRate = (1 - 107.90) / 107.90 * 100
+let japanbigMacIndex = usdJapanCurrencyRate
+
+
+/* uk */
+
+let iPPPUk = baseCurrency - ukBigMac
+
+console.log("Implied UK Purchasing Power Parity is " + iPPPUk);
+
+console.log("Uk Big Mac Index =" + ukbigMacIndex + "%");
+
+/* france */
+
+let iPPPFr = baseCurrency - franceBigMac
+
+console.log("Implied French Purchasing Power Parity is " + iPPPFr);
+
+console.log("French Big Mac Index =" + francebigMacIndex + "%");
+
+
+/* japan */
+
+let iPPPJp = baseCurrency - japanBigMac
+
+console.log("Implied Japanese Purchasing Power Parity is " + iPPPJp);
+
+console.log("Japanese Big Mac Index =" + japanbigMacIndex + "%");
+
+
+/* spain */
