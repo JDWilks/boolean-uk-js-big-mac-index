@@ -24,6 +24,7 @@ let ukBigMac = 3.19
 let franceBigMac = 8
 let japanBigMac = 390
 let peruBigMac = 10.50
+let russianBigMac = 135
 
 
 let usdUkCurrencyRate = (1 - 0.72) / 0.72 * 100
@@ -38,8 +39,11 @@ let japanBigMacIndex = usdJapanCurrencyRate
 let usdPeruCurrencyRate = (1 - 3.78) / 3.78 * 100
 let peruBigMacIndex = usdPeruCurrencyRate
 
+let usdRuassianCurrencyRate = (1 - 74.81) / 74.81 * 100
+let russianBigMacIndex = usdRuassianCurrencyRate
 
-/* uk */
+
+/* 1.uk */
 
 let iPPPUk = baseCurrency - ukBigMac
 
@@ -49,8 +53,9 @@ console.log("Uk Big Mac Index =" + ukBigMacIndex + "%");
 
 console.log("The Pound is overvalued against the dollar by " +(Math.trunc(ukBigMacIndex)) + "%");
 
+console.log("The Uk Big Mac index is greater than France : " + (ukBigMacIndex > franceBigMacIndex));
 
-/* france */
+/* 2.france */
 
 let iPPPFr = baseCurrency - franceBigMac
 
@@ -60,9 +65,10 @@ console.log("French Big Mac Index =" + franceBigMacIndex + "%");
 
 console.log("The Euro is overvalued against the dollar by " +(Math.trunc(franceBigMacIndex)) + "%");
 
+console.log("The French Big Mac index is greater than Japan : " + (franceBigMacIndex > japanBigMacIndex));
 
 
-/* japan */
+/* 3.japan */
 
 let iPPPJp = baseCurrency - japanBigMac
 
@@ -72,7 +78,10 @@ console.log("Japanese Big Mac Index =" + japanBigMacIndex + "%");
 
 console.log("The Yen is overvalued against the dollar by " +(Math.trunc(japanBigMacIndex)) + "%");
 
-/* Peru */
+console.log("The Japanese Big Mac index is greater than Peru : " + (japanBigMacIndex > peruBigMacIndex));
+
+
+/* 4.Peru */
 
 let iPPPPu = baseCurrency - peruBigMac
 
@@ -81,3 +90,18 @@ console.log("Implied Peru Purchasing Power Parity is " + iPPPPu);
 console.log("Peru Big Mac Index =" + peruBigMacIndex + "%");
 
 console.log("The Sol is overvalued against the dollar by " +(Math.trunc(peruBigMacIndex)) + "%");
+
+console.log("The Peruvian Big Mac index is greater than Russian : " + (peruBigMacIndex > russianBigMacIndex));
+
+
+/* 5.Russia */
+
+let iPPPRu = baseCurrency - russianBigMac
+
+console.log("Implied Russian Purchasing Power Parity is " + iPPPRu);
+
+console.log("Russian Big Mac Index =" + russianBigMacIndex + "%");
+
+console.log("The Ruble is overvalued against the dollar by " +(Math.trunc(russianBigMacIndex)) + "%");
+
+console.log("The Russian Big Mac index is greater than UK : " + (russianBigMacIndex > ukBigMacIndex));
