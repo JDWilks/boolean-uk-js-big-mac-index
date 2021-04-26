@@ -23,16 +23,20 @@ let baseCurrency = 5.66
 let ukBigMac = 3.19
 let franceBigMac = 8
 let japanBigMac = 390
+let peruBigMac = 10.50
 
 
 let usdUkCurrencyRate = (1 - 0.72) / 0.72 * 100
-let ukbigMacIndex = usdUkCurrencyRate
+let ukBigMacIndex = usdUkCurrencyRate
 
 let usdFranceCurrencyRate = (1 - 0.83) / 0.83 * 100
-let francebigMacIndex = usdFranceCurrencyRate
+let franceBigMacIndex = usdFranceCurrencyRate
 
 let usdJapanCurrencyRate = (1 - 107.90) / 107.90 * 100
-let japanbigMacIndex = usdJapanCurrencyRate
+let japanBigMacIndex = usdJapanCurrencyRate
+
+let usdPeruCurrencyRate = (1 - 3.78) / 3.78 * 100
+let peruBigMacIndex = usdPeruCurrencyRate
 
 
 /* uk */
@@ -41,7 +45,10 @@ let iPPPUk = baseCurrency - ukBigMac
 
 console.log("Implied UK Purchasing Power Parity is " + iPPPUk);
 
-console.log("Uk Big Mac Index =" + ukbigMacIndex + "%");
+console.log("Uk Big Mac Index =" + ukBigMacIndex + "%");
+
+console.log("The Pound is overvalued against the dollar by " +(Math.trunc(ukBigMacIndex)) + "%");
+
 
 /* france */
 
@@ -49,7 +56,10 @@ let iPPPFr = baseCurrency - franceBigMac
 
 console.log("Implied French Purchasing Power Parity is " + iPPPFr);
 
-console.log("French Big Mac Index =" + francebigMacIndex + "%");
+console.log("French Big Mac Index =" + franceBigMacIndex + "%");
+
+console.log("The Euro is overvalued against the dollar by " +(Math.trunc(franceBigMacIndex)) + "%");
+
 
 
 /* japan */
@@ -58,7 +68,16 @@ let iPPPJp = baseCurrency - japanBigMac
 
 console.log("Implied Japanese Purchasing Power Parity is " + iPPPJp);
 
-console.log("Japanese Big Mac Index =" + japanbigMacIndex + "%");
+console.log("Japanese Big Mac Index =" + japanBigMacIndex + "%");
 
+console.log("The Yen is overvalued against the dollar by " +(Math.trunc(japanBigMacIndex)) + "%");
 
-/* spain */
+/* Peru */
+
+let iPPPPu = baseCurrency - peruBigMac
+
+console.log("Implied Peru Purchasing Power Parity is " + iPPPPu);
+
+console.log("Peru Big Mac Index =" + peruBigMacIndex + "%");
+
+console.log("The Sol is overvalued against the dollar by " +(Math.trunc(peruBigMacIndex)) + "%");
